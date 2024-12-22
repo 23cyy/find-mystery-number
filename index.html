@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jeu de Devinette - Nombre Mystère</title>
+  <!-- Lien vers la feuille de style CSS -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+</head>
+<body>
+  <header>
+    <h1>Jeu de Devinette Arithmétique</h1>
+  </header>
+
+  <main class="container">
+    <!-- SECTION DE CONFIGURATION -->
+    <section class="settings">
+      <h2>Configuration</h2>
+      <div class="form-group">
+        <label for="difficultySelect">Niveau de difficulté :</label>
+        <select id="difficultySelect">
+          <option value="facile">Facile (1 à 10)</option>
+          <option value="moyen" selected>Moyen (1 à 50)</option>
+          <option value="difficile">Difficile (1 à 100)</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="modeSelect">Mode :</label>
+        <select id="modeSelect">
+          <option value="addition">Addition (+)</option>
+          <option value="soustraction">Soustraction (−)</option>
+          <option value="multiplication">Multiplication (×)</option>
+          <option value="division">Division (÷)</option>
+          <option value="aleatoire" selected>Aléatoire (mélange)</option>
+        </select>
+      </div>
+
+      <button id="startGameBtn">Lancer la partie</button>
+      <button id="resetHistoryBtn">Réinitialiser l’historique</button>
+
+    </section>
+
+    <!-- SECTION DE JEU : masquée par défaut -->
+    <section class="game hidden">
+      <h2>Résous l'opération</h2>
+      <div class="operation">
+        <span id="operand1"></span>
+        <span id="operator"></span>
+        <span id="operand2"></span>
+        <span>=</span>
+      </div>
+      <input type="number" id="userAnswer" placeholder="Votre réponse..." />
+      <button id="submitAnswerBtn">Valider</button>
+      <p id="feedback"></p>
+    </section>
+
+    <!-- SECTION DE RÉSULTATS : masquée par défaut -->
+    <section class="results hidden">
+      <h2>Fin de la partie !</h2>
+      <p id="scoreMessage"></p>
+      <button id="restartBtn">Rejouer</button>
+    </section>
+
+    <!-- SECTION D'HISTORIQUE -->
+    <section class="history">
+      <h2>Historique des parties</h2>
+      <div id="historyList"></div>
+    </section>
+  </main>
+
+  <!-- Lien vers le script JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>

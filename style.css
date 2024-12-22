@@ -1,0 +1,174 @@
+/* Reset minimal */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /* Typographie et mise en page générale */
+  body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: #333;
+    background: linear-gradient(135deg, #ECE9E6, #FFFFFF);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Header */
+  header {
+    background-color: #f8f8f8;
+    padding: 1rem;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+  }
+
+  header h1 {
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: #333;
+  }
+
+  /* Conteneur principal */
+  .container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: 600px;
+    width: 100%;
+    padding: 2rem;
+  }
+
+  /* Titres de section */
+  .container h2 {
+    margin-bottom: 1rem;
+    color: #222;
+    font-size: 1.4rem;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 0.5rem;
+  }
+
+  /* Section Configuration */
+  .settings {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  /* Section Jeu */
+  .game {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  .game .operation {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+
+  #userAnswer {
+    width: 60%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+  }
+
+  /* Section Résultats */
+  .results {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  /* Section Historique */
+  .history {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    padding: 1.5rem;
+  }
+
+  #historyList {
+    max-height: 200px;
+    overflow-y: auto;
+    margin-top: 1rem;
+  }
+
+  .historyEntry {
+    border-bottom: 1px solid #eee;
+    padding: 0.5rem 0;
+  }
+
+  /* Formulaires et éléments interactifs */
+  .form-group {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Label + Sélecteur */
+  .form-group label {
+    margin-bottom: 0.3rem;
+  }
+
+  .form-group select {
+    padding: 0.5rem;
+    font-size: 1rem;
+  }
+
+  /* Boutons */
+  button {
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 0.7rem 1rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+  }
+
+  button:hover {
+    background-color: #0056b3;
+  }
+
+  button:active {
+    transform: scale(0.98);
+  }
+
+  /* Feedback utilisateur */
+  #feedback {
+    margin-top: 0.5rem;
+    font-weight: bold;
+  }
+
+  /* Classes utilitaires */
+  .hidden {
+    display: none !important;
+  }
+
+  /* Responsive */
+  @media (max-width: 600px) {
+    .container {
+      padding: 1rem;
+    }
+
+    .operation {
+      font-size: 1.2rem;
+    }
+
+    #userAnswer {
+      width: 100%;
+    }
+  }
